@@ -1,0 +1,25 @@
+dn: o=UT
+objectClass: organization
+o: UT
+
+dn: ou=People,o=UT
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=othergroup,o=UT
+objectClass: organizationalUnit
+ou: othergroup
+
+# Add John Smith to the organization
+dn: uid=jsmith1,ou=People,o=UT
+objectClass: inetOrgPerson
+cn: John Smith
+sn: Smith
+uid: jsmith1
+
+# Add Sally Brown to the organization
+dn: uid=sbrown20,ou=People,o=UT
+objectClass: inetOrgPerson
+cn: Sally Brown
+sn: Brown
+uid: sbrown20
