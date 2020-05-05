@@ -55,6 +55,5 @@ public class MyTest {
     @After
     public void cleanup() {
         ds.shutDown(true);
-
     }
 }
