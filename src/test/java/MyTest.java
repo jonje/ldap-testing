@@ -25,6 +25,7 @@ public class MyTest {
             config.setListenerConfigs(listenerConfig);
             config.addAdditionalBindCredentials("cn=Directory Manager", "password");
             this.ds = new InMemoryDirectoryServer(config);
+            this.ds.applyChangesFromLDIF("src/test/resources/base-schema.ldif");
             this.ds.importFromLDIF(true, "src/test/resources/test-data.ldif");
             this.ds.startListening("test");
         } catch (LDAPException e) {
